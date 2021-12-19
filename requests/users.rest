@@ -1,0 +1,19 @@
+###
+POST {{host}}/api/users/login
+Content-Type: application/json
+
+{
+  "email" : "elenacfnb@gmail.com",
+  "password" : "12345678"
+}
+
+###
+POST {{host}}/api/users/register
+Content-Type: application/json
+
+{
+  "name" : "Elena2",
+  "email" : "elenacfnb2@gmail.com",
+  "password" : "12345678",
+  "role" : "admin"
+}
