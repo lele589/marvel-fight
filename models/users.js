@@ -19,14 +19,18 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         type: DataTypes.STRING(150),
       },
+      role: {
+        allowNull: false,
+        type: DataTypes.ENUM('admin', 'user'),
+      },
     },
     {
       freezeTableName: true,
       classMethods: {},
     },
   )
-  /* User.associate = function (models) {
-    // associations can be defined here
-  } */
+  User.associate = models => {
+    User.hasMany(models.Fight) /* , { onDelete: 'cascade' } ) */
+  }
   return User
 }
