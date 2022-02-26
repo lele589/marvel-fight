@@ -1,0 +1,31 @@
+###
+GET {{host}}/api/villains
+Content-Type: application/json
+
+###
+GET {{host}}/api/villains/1
+Content-Type: application/json
+
+###
+POST {{host}}/api/villains
+Content-Type: application/json
+
+{
+  "pack_code": "MC26",
+  "name": "Nova",
+  "thumb": ""
+}
+
+###
+PUT {{host}}/api/villains/25
+Content-Type: application/json
+
+{
+  "pack_code": "MC01",
+  "name": "Spiderman",
+  "thumb": ""
+}
+
+###
+DELETE {{host}}/api/villains/25
+Content-Type: application/json
